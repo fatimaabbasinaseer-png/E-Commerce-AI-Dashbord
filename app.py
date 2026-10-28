@@ -100,7 +100,7 @@ with tab2:
 
 with tab3:
     st.subheader("Inventory Management")
-    st.dataframe(products_df.style.applymap(lambda x: 'background-color: #FECACA' if isinstance(x, int) and x < 10 else '', subset=['Stock']), use_container_width=True)
+    st.dataframe(products_df)
     fig_stock = px.bar(products_df, x='Product', y='Stock', color='Stock', color_continuous_scale='Reds')
     st.plotly_chart(fig_stock, use_container_width=True)
 
