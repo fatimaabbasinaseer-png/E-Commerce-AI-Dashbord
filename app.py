@@ -93,8 +93,7 @@ with tab2:
         fig_s = px.bar(x=list(sentiment_data.keys()), y=list(sentiment_data.values()), color=list(sentiment_data.keys()), color_discrete_sequence=['#10B981','#6B7280','#EF4444'])
         st.plotly_chart(fig_s, use_container_width=True)
     
-    st.markdown("### Chat with AI Assistant")
-    user_q = st.text_input("Apna sawal likho (e.g., Which product is most profitable?)")
+    st.write(f"🤖 **AI Answer:** For '{user_q}', according to data, iPhone 15 is the most profitable with 120 units sold!")
     if user_q:
         st.write(f"🤖 **AI Answer:** '{user_q}' ke liye, data ke mutabiq **iPhone 15** sabse zyada profitable hai with 120 units sold!")
 
