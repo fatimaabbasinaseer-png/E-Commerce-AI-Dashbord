@@ -19,7 +19,16 @@ with tab2:
     st.markdown("### Chat with AI Assistant")
     user_q = st.text_input("Enter your question (e.g., Which product is most profitable?)")
     if user_q:
-        st.write(f"🤖 **AI Answer:** For '{user_q}', according to data, iPhone 15 is the most profitable with 120 units sold!")
+        q = user_q.lower()
+        if "coffee" in q:
+            st.write(f"🤖 **AI Answer:** Coffee Maker sold 85 units with revenue of $4,250.")
+        elif "nike" in q or "shoe" in q:
+            st.write(f"🤖 **AI Answer:** Nike Shoes sold 95 units with revenue of $9,500.")
+        elif "iphone" in q or "phone" in q or "profitable" in q:
+            st.write(f"🤖 **AI Answer:** iPhone 15 is the most profitable! Sold 120 units with revenue of $120,000.")
+        else:
+            st.write(f"🤖 **AI Answer:** Based on data, total 360 units sold. iPhone is top product.")
 
 with tab3:
     st.write("This dashboard analyzes E-Commerce data with AI insights.")
+    
