@@ -31,4 +31,4 @@ with tab2:
 
 with tab3:
     st.write("This dashboard analyzes E-Commerce data with AI insights.")
-    
+    elif "iphone" in q or "phone" in q or "profitable" in q or "revenue" in q or "highest" in q:
